@@ -11,35 +11,49 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.of(context).push(
-        //   MaterialPageRoute(
-        //     builder: (context) {
-        //       return CategoryView(
-        //         category: category.categoryName,
-        //       );
-        //     },
-        //   ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => category.pageName),
+        );
       },
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Container(
+          width: 180,
+          // height: 120,
           constraints: const BoxConstraints(
-            maxHeight: 100,
+            maxHeight: 120,
             maxWidth: 180,
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             image: DecorationImage(
-                image: AssetImage(category.image), fit: BoxFit.fill),
+                image: AssetImage(category.image),
+                fit: BoxFit.fill,
+                opacity: .75),
           ),
-          child: Center(
-            child: Text(
-              category.categoryName,
-              style: const TextStyle(
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: double.infinity, // Make the container take the full width
+              padding: const EdgeInsets.all(8.0),
+              color: Colors.black54, // Background color for the container
+              child: Text(
+                category.categoryName,
+                textAlign: TextAlign.center, // Center the text
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(2.0, 2.0),
+                      blurRadius: 3.0,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
         ),

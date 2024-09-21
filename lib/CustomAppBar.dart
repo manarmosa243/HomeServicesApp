@@ -24,22 +24,35 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconButton(
-                icon: Icon(
-                  Icons.home,
-                  color: currentPage == 'home' ? Colors.blue : Colors.black,
-                  size: 40,
-                ), // Home icon
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => myHome()));
-                },
-              ),
+              // if (currentPage == 'categories')
+              //   IconButton(
+              //     icon: Icon(
+              //       Icons.home,
+              //       color: Colors.black,
+              //       size: 40,
+              //     ),
+              //     onPressed: () {
+              //       Navigator.pushReplacement(context,
+              //           MaterialPageRoute(builder: (context) => myHome()));
+              //     },
+              //   ),
+              // if (currentPage != 'categories')
+                IconButton(
+                  icon: Icon(
+                    Icons.home,
+                    color: currentPage == 'home' ? Colors.indigo : Colors.black,
+                    size: 30,
+                  ), // Home icon
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => myHome()));
+                  },
+                ),
               IconButton(
                 icon: Icon(
                   Icons.menu,
-                  color: currentPage == 'menu' ? Colors.blue : Colors.black,
-                  size: 40,
+                  color: currentPage == 'menu' ? Colors.indigo : Colors.black,
+                  size: 30,
                 ),
                 onPressed: () {
                   Navigator.pushReplacement(context,
@@ -49,8 +62,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               IconButton(
                 icon: Icon(
                   Icons.settings,
-                  size: 40,
-                  color: currentPage == 'settings' ? Colors.blue : Colors.black,
+                  size: 30,
+                  color: currentPage == 'settings' ? Colors.indigo : Colors.black,
                 ),
                 onPressed: () {
                   Navigator.pushReplacement(context,

@@ -1,3 +1,4 @@
+import 'package:final_project/SettingsPage.dart';
 import 'package:final_project/views/category_card.dart';
 import 'package:final_project/views/category_model.dart';
 import 'package:flutter/material.dart';
@@ -9,30 +10,37 @@ class CategoriesvListView extends StatelessWidget {
     CategoryModel(
       image: 'assets/business.avif',
       categoryName: 'Business',
+      pageName: SettingsPage(),
     ),
     CategoryModel(
       image: 'assets/entertaiment.avif',
       categoryName: 'Entertainment',
+      pageName: SettingsPage(),
     ),
     CategoryModel(
       image: 'assets/health.avif',
       categoryName: 'Health',
+      pageName: SettingsPage(),
     ),
     CategoryModel(
       image: 'assets/science.avif',
       categoryName: 'Science',
+      pageName: SettingsPage(),
     ),
     CategoryModel(
       image: 'assets/technology.jpeg',
       categoryName: 'Technology',
+      pageName: SettingsPage(),
     ),
     CategoryModel(
       image: 'assets/sports.avif',
       categoryName: 'Sports',
+      pageName: SettingsPage(),
     ),
     CategoryModel(
       image: 'assets/general.avif',
       categoryName: 'General',
+      pageName: SettingsPage(),
     ),
   ];
 
