@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String currentPage;
 
-  const CustomAppBar({Key? key, required this.currentPage}) : super(key: key);
+  const CustomAppBar({super.key, required this.currentPage});
 
   @override
   Size get preferredSize => const Size.fromHeight(40.0);
@@ -45,7 +45,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ), // Home icon
                   onPressed: () {
                     Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => myHome()));
+                        MaterialPageRoute(builder: (context) => const myHome()));
                   },
                 ),
               IconButton(
@@ -56,7 +56,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => MenuPage()));
+                      MaterialPageRoute(builder: (context) => const MenuPage()));
                 },
               ),
               IconButton(
@@ -67,7 +67,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => SettingsPage()));
+                      MaterialPageRoute(builder: (context) => const SettingsPage()));
                 },
               ),
             ],

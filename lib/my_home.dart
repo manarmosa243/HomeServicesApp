@@ -35,12 +35,12 @@ class myHome extends StatelessWidget {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Container(
+              child: SizedBox(
                 height: 50,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("OUR SERVICES",
+                    const Text("OUR SERVICES",
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class myHome extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CategoriesPage()),
+                              builder: (context) => const CategoriesPage()),
                         );
                       },
                       child: const Text(
@@ -66,10 +66,10 @@ class myHome extends StatelessWidget {
               ),
             ),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
               child: SizedBox(
-            child: const CategoriesListView(),
             height: 120,
+            child: CategoriesListView(),
           )),
           const sizedbox(),
           const SliverFillRemaining(child: CategoriesvListView()),
@@ -87,10 +87,10 @@ class welcomeSentence extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
+    return const SliverToBoxAdapter(
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: EdgeInsets.all(20),
           child: Text(
             'Experience the comfort of a well-maintained Home with our expert services!',
             style: TextStyle(
@@ -112,7 +112,7 @@ class searchbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
+    return const SliverToBoxAdapter(
         child: Center(
       child: searchbar(),
     ));

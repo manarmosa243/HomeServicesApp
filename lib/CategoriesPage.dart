@@ -5,6 +5,8 @@ import 'CustomAppBar.dart';
 import 'views/category_card.dart';
 
 class CategoriesPage extends StatelessWidget {
+  const CategoriesPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return
@@ -17,10 +19,10 @@ class CategoriesPage extends StatelessWidget {
         //     return false; // Prevent default back button behavior
         //   },
         //   child:
-        Scaffold(
+        const Scaffold(
       appBar: CustomAppBar(currentPage: 'categories'),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: EdgeInsets.all(15.0),
         child: Column(
           children: [
             SizedBox(height: 32.0), // Add more space before the GridView

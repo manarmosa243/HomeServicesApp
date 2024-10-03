@@ -9,7 +9,7 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Add your widget implementation here
-    return Scaffold(
+    return const Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60.0), // Set the height of the AppBar
         child: CustomAppBar(currentPage: 'menu'),

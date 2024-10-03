@@ -16,7 +16,8 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Main App',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff6759FF)),
+        useMaterial3: true,
       ),
       home: const myHome(),
       // routes: {
@@ -27,3 +28,4 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+

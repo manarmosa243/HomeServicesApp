@@ -8,7 +8,7 @@ class CategoriesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: categories.length,
+      itemCount: 4,
       itemBuilder: (context, index) {
         return CategoryCard(
           category: categories[index],
